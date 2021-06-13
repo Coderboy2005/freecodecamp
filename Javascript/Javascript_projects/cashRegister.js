@@ -11,7 +11,6 @@ function checkCashRegister(price, cash, cid) {
   "HUNDRED": 10000
   }
   
-  function checkCashRegister(price, cash, cid) {
   
   let changeSum = cash * 100 - price * 100;
   let changeSumCheck = changeSum;
@@ -37,7 +36,7 @@ function checkCashRegister(price, cash, cid) {
   });
   
   if (changeSum > 0) {
-    status = "INSUFICIENT_FUNDS";
+    status = "INSUFFICIENT_FUNDS";
     change = [];
    } else if (changeSum == 0 && changeSumCheck == cidSum) {
     status = "CLOSED";
@@ -47,6 +46,6 @@ function checkCashRegister(price, cash, cid) {
   }
   return { "status": status, "change": change };
   }
-}
+
   
   checkCashRegister(19.5, 20, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]);
