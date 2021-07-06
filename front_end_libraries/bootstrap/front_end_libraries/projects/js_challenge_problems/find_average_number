@@ -1,0 +1,3 @@
+function findAverageNum(arr) {
+  return Math.average(...arr);
+}
